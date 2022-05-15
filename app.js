@@ -1,7 +1,4 @@
 
-
-
-
 var userApp = angular
 	.module("userApp", ['ngRoute'])
 	.config(function ($routeProvider) {
@@ -150,51 +147,3 @@ var userApp = angular
 		}
 
 	})
-
-
-
-
-
-userApp.controller('mainController', function AddUserController($scope, $http) {
-
-	// $scope.user = { name: "", email: "", userId: 0 };
-	// $scope.userList = [];
-	// $scope.userCounter = 0
-
-	// $scope.formSubmit = function () {
-	// 	$scope.userCounter += 1;
-	// 	$scope.user.userId = $scope.userCounter;
-	// 	$scope.userList.push($scope.user);
-
-	// 	$scope.user = {};
-	// 	$scope.myForm.name.$touched = false;
-	// 	$scope.myForm.email.$touched = false;
-	// }
-
-	// $scope.getPageCount = function () {
-	// 	$http.get("https://reqres.in/api/users")
-	// 		.then(function (response) {
-	// 			$scope.total_pages = response.data.total_pages
-	// 		});
-	// }
-
-	// $scope.getDataPerPage = function (page_number) {
-	// 	$http.get("https://reqres.in/api/users?page=" + page_number)
-	// 		.then(function (response) {
-	// 			$scope.response_list.push(response.data);
-	// 		});
-	// }
-
-	// $scope.loopPages = function () {
-
-	// 	$scope.getPageCount();
-
-	// 	$scope.response_list = [];
-
-	// 	for (var i = 1; i <= $scope.total_pages; i++) {
-	// 		$scope.getDataPerPage(i);
-	// 	}
-	// }
-
-
-});

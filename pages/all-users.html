@@ -1,31 +1,11 @@
-<div class="row mt-5"> <!--GET HTTP Button-->
+<div class="row mt-5">
+    <!--GET HTTP Button-->
     <div class="col-3"></div>
     <div class="col-6">
-
-
-
 
         <div class="row pull-right"><button type="button" class="btn btn-primary d-grid gap-2 col-6 mx-auto"
                 ng-click="loopPages()">Make Rest Call Data</button>
         </div>
-
-
-        <!-- <ul style="list-style-type: none;">
-            <div ng-repeat="page_response in response_list">
-              <li ng-repeat="user in page_response.data" style="margin-bottom: 50px ;">
-                <img src="{{user.avatar}}" alt="{{user.first_name}}  style=" object-fit: cover; width: 128px; height:
-                  128px; ">  <br>
-            Name: {{user.first_name}} {{user.last_name}} <br>
-            Email:{{user.email}} 
-              </li>
-            </div>
-          </ul> -->
-
-
-
-
-
-
 
     </div>
     <div class=" col-3">
@@ -33,13 +13,13 @@
 </div>
 
 
-<div class="row mt-5"> <!--User list-->
+<div class="row mt-5">
+    <!--User list-->
     <div class="col-12">
 
 
         <div ng-repeat="page_response in response_list">
             <div class="card-group">
-
 
                 <div class="card" ng-repeat="user in page_response.data">
                     <img src="{{user.avatar}}" class="card-img-top" alt="{{user.first_name}}"
