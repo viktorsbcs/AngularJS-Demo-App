@@ -8,11 +8,11 @@ var userApp = angular
 		$routeProvider
 
 			.when("/user", {
-				templateUrl: "user.html",
+				templateUrl: "pages/user.html",
 				controller: "UserController"
 			})
 			.when("/all-users", {
-				templateUrl: "all-users.html",
+				templateUrl: "pages/all-users.html",
 				controller: "AllUsersController"
 			})
 			.otherwise({ redirectTo: '/user' });
