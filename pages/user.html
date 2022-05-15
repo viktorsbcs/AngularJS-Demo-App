@@ -52,24 +52,106 @@
 
 
 <div class="row mt-5">
-  <!--Table-->
+  <!--Nav tabs-->
   <div class="col-3"></div>
   <div class="col-6">
 
-    <table class="table table-bordered">
-      <tr>
-        <th>#</th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Role</th>
-      </tr>
-      <tr ng-repeat="user in userList">
-        <td>{{user.userId}}</td>
-        <td>{{user.name}}</td>
-        <td>{{user.email}}</td>
-        <td>{{user.role}}</td>
-      </tr>
-    </table>
+
+
+    <nav>
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <button class="nav-link active" id="nav-all-tab" data-bs-toggle="tab" data-bs-target="#nav-all" type="button"
+          role="tab" aria-controls="nav-all" aria-selected="true" ng-click="select(1)">All</button>
+
+        <button class="nav-link" id="nav-administrator-tab" data-bs-toggle="tab" data-bs-target="#nav-administrator"
+          type="button" role="tab" aria-controls="nav-administrator" aria-selected="false"
+          ng-click="select(2)">Administrators</button>
+
+        <button class="nav-link" id="nav-moderator-tab" data-bs-toggle="tab" data-bs-target="#nav-moderator"
+          type="button" role="tab" aria-controls="nav-moderator" aria-selected="false"
+          ng-click="select(3)">Moderators</button>
+
+        <button class="nav-link" id="nav-subscriber-tab" data-bs-toggle="tab" data-bs-target="#nav-subscriber"
+          type="button" role="tab" aria-controls="nav-subscriber" aria-selected="false"
+          ng-click="select(4)">Subscribers</button>
+
+      </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab">
+        <table class="table table-bordered">
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+          </tr>
+          <tr ng-repeat="user in userList">
+            <td>{{user.userId}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.role}}</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="tab-pane fade" id="nav-administrator" role="tabpanel" aria-labelledby="nav-administrator-tab">
+        <table class="table table-bordered">
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+          </tr>
+          <tr ng-repeat="user in userList | filter:{role:filtText}">
+            <td>{{user.userId}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.role}}</td>
+          </tr>
+        </table>
+
+
+      </div>
+
+      <div class="tab-pane fade" id="nav-moderator" role="tabpanel" aria-labelledby="nav-moderator-tab">
+        <table class="table table-bordered">
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+          </tr>
+          <tr ng-repeat="user in userList | filter:{role:filtText}">
+            <td>{{user.userId}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.role}}</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="tab-pane fade" id="nav-subscriber" role="tabpanel" aria-labelledby="nav-subscriber-tab">
+        <table class="table table-bordered">
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+          </tr>
+          <tr ng-repeat="user in userList | filter:{role:filtText}">
+            <td>{{user.userId}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.role}}</td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+
+
+
 
 
   </div>
