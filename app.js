@@ -100,6 +100,12 @@ var userApp = angular
 			$scope.userList.push($scope.user);
 			$scope.user = {};
 
+			$scope.user = { name: "Bill Russel", email: "bill@info.com", role: "Subscriber", userId: 0 };		
+			$scope.userCounter += 1;
+			$scope.user.userId = $scope.userCounter;
+			$scope.userList.push($scope.user);
+			$scope.user = {};
+
 			
 		}
 	})
