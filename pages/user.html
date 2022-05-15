@@ -1,71 +1,79 @@
-<div class="row mt-5"> <!--Form-->
-    <div class="col-3"></div>
-    <div class="col-6">
+<div class="row mt-5">
+  <!--Form-->
+  <div class="col-3"></div>
+  <div class="col-6">
 
-      <form ng-submit="formSubmit()" name="myForm">
-        <div class="mb-3">
-          <label for="nameInput" class="form-label">Name</label>
+    <form ng-submit="formSubmit()" name="myForm">
+      <div class="mb-3">
+        <label for="nameInput" class="form-label">Name</label>
 
-          <input name="name" ng-model="user.name" type="text" class="form-control" id="nameInput" ng-required="true" >
-          <span class="text-danger" ng-show="myForm.name.$touched && myForm.name.$error.required">Full name is required.</span>
+        <input name="name" ng-model="user.name" type="text" class="form-control" id="nameInput" ng-required="true">
+        <span class="text-danger" ng-show="myForm.name.$touched && myForm.name.$error.required">Full name is
+          required.</span>
 
-        </div>
-        <div class="mb-3">
-          <label for="emailInput" class="form-label">Email</label>
+      </div>
+      <div class="mb-3">
+        <label for="emailInput" class="form-label">Email</label>
 
-          <input name="email" ng-model="user.email" type="text" class="form-control" id="emailInput" ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" ng-required="true" >
+        <input name="email" ng-model="user.email" type="text" class="form-control" id="emailInput"
+          ng-pattern="/^[a-z]+[a-z0-9._]+@[a-z]+\.[a-z.]{2,5}$/" ng-required="true">
 
-          <span class="text-danger" ng-show="myForm.email.$touched && myForm.email.$error.required">Email is required.</span>
-          <span class="text-danger" ng-show="myForm.email.$touched && myForm.email.$error.pattern">Email has invalid format.</span>
+        <span class="text-danger" ng-show="myForm.email.$touched && myForm.email.$error.required">Email is
+          required.</span>
+        <span class="text-danger" ng-show="myForm.email.$touched && myForm.email.$error.pattern">Email has invalid
+          format.</span>
 
 
 
-        </div>
-        <div class="mb-3">
-            <label for="roleInput" class="form-label">Select user role</label>
+      </div>
+      <div class="mb-3">
+        <label for="roleInput" class="form-label">Select user role</label>
 
-            <select class="form-select" aria-label="user-role" id="roleInput" ng-model="user.role" name="role" ng-required="true">
-                <option value="Subscriber">Subscriber</option>
-                <option value="Moderator">Moderator</option>
-                <option value="Administrator">Administrator</option>
-              </select>
-              <span class="text-danger" ng-show="myForm.role.$touched && myForm.role.$error.required">Role is required.</span>
+        <select class="form-select" aria-label="user-role" id="roleInput" ng-model="user.role" name="role"
+          ng-required="true">
+          <option value="Subscriber">Subscriber</option>
+          <option value="Moderator">Moderator</option>
+          <option value="Administrator">Administrator</option>
+        </select>
+        <span class="text-danger" ng-show="myForm.role.$touched && myForm.role.$error.required">Role is required.</span>
 
-        </div>
+      </div>
 
-        <button type="submit" class="btn btn-primary" ng-disabled="myForm.$invalid">Submit</button>
-      </form>
+      <button type="submit" class="btn btn-primary" ng-disabled="myForm.$invalid">Submit</button>
+    </form>
 
-      {{myForm.$valid}}
-
-    </div>
-    <div class=" col-3">
-    </div>
+    {{myForm.$valid}}
 
   </div>
-
-
-  <div class="row mt-5"> <!--Table-->
-    <div class="col-3"></div>
-    <div class="col-6">
-        <button type="button" class="btn btn-primary" ng-click="populateWithDummyData()">Fill with dummy data</button>
-
-      <table class="table table-bordered">
-        <tr>
-          <th>#</th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Role</th>
-        </tr>
-        <tr ng-repeat="user in userList">
-          <td>{{user.userId}}</td>
-          <td>{{user.name}}</td>
-          <td>{{user.email}}</td>
-          <td>{{user.role}}</td>
-        </tr>
-      </table>
-
-
-    </div>
-    <div class="col-3"></div>
+  <div class=" col-3">
   </div>
+
+</div>
+
+
+<div class="row mt-5">
+  <!--Table-->
+  <div class="col-3"></div>
+  <div class="col-6">
+
+    <table class="table table-bordered">
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+      </tr>
+      <tr ng-repeat="user in userList">
+        <td>{{user.userId}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.role}}</td>
+      </tr>
+    </table>
+
+
+  </div>
+  <div class="col-3"> <button type="button" class="btn btn-primary" ng-click="populateWithDummyData()">Fill with dummy
+      data</button>
+  </div>
+</div>
