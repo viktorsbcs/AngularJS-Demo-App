@@ -46,31 +46,55 @@ var userApp = angular
 			$scope.userList = [];
 			$scope.userCounter = 0
 
-			$scope.user = { name: "Artūŗs Kalniņš", email: "artūrs@gmail.com", role: "Administrator", userId: 0 };		
+			$scope.user = { name: "Sam Anthony", email: "sam@gmail.com", role: "Administrator", userId: 0 };		
 			$scope.userCounter += 1;
 			$scope.user.userId = $scope.userCounter;
 			$scope.userList.push($scope.user);
 			$scope.user = {};
 
-			$scope.user = { name: "Ieva Rudzīte", email: "ieva@inbox.com", role: "Moderator", userId: 0 };		
+			$scope.user = { name: "Bridget Jones", email: "bridget@inbox.com", role: "Moderator", userId: 0 };		
 			$scope.userCounter += 1;
 			$scope.user.userId = $scope.userCounter;
 			$scope.userList.push($scope.user);
 			$scope.user = {};
 
-			$scope.user = { name: "Kārlis Mālnieks", email: "kārlis@yahoo.com", role: "Moderator", userId: 0 };		
+			$scope.user = { name: "Karl Thomson", email: "karl@yahoo.com", role: "Moderator", userId: 0 };		
 			$scope.userCounter += 1;
 			$scope.user.userId = $scope.userCounter;
 			$scope.userList.push($scope.user);
 			$scope.user = {};
 
-			$scope.user = { name: "Justīne Ādamnsone", email: "justīne@gmail.com", role: "Subscriber", userId: 0 };		
+			$scope.user = { name: "Justine Adamson", email: "justine@gmail.com", role: "Subscriber", userId: 0 };		
 			$scope.userCounter += 1;
 			$scope.user.userId = $scope.userCounter;
 			$scope.userList.push($scope.user);
 			$scope.user = {};
 
-			$scope.user = { name: "Aleksandrs Suhoparovs", email: "aleksandrs@gmail.com", role: "Subscriber", userId: 0 };		
+			$scope.user = { name: "Aleksandr Nowitzki", email: "aleksandr@gmail.com", role: "Subscriber", userId: 0 };		
+			$scope.userCounter += 1;
+			$scope.user.userId = $scope.userCounter;
+			$scope.userList.push($scope.user);
+			$scope.user = {};
+
+			$scope.user = { name: "William Manor", email: "william@gmail.com", role: "Administrator", userId: 0 };		
+			$scope.userCounter += 1;
+			$scope.user.userId = $scope.userCounter;
+			$scope.userList.push($scope.user);
+			$scope.user = {};
+
+			$scope.user = { name: "George Bean", email: "george@gmail.com", role: "Moderator", userId: 0 };		
+			$scope.userCounter += 1;
+			$scope.user.userId = $scope.userCounter;
+			$scope.userList.push($scope.user);
+			$scope.user = {};
+
+			$scope.user = { name: "Jack Depp", email: "jack@outlook.com", role: "Subscriber", userId: 0 };		
+			$scope.userCounter += 1;
+			$scope.user.userId = $scope.userCounter;
+			$scope.userList.push($scope.user);
+			$scope.user = {};
+
+			$scope.user = { name: "Branda Simpson", email: "branda@abc.com", role: "Subscriber", userId: 0 };		
 			$scope.userCounter += 1;
 			$scope.user.userId = $scope.userCounter;
 			$scope.userList.push($scope.user);
